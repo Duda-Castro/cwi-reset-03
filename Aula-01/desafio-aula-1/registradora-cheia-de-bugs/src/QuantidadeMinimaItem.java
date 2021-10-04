@@ -9,16 +9,16 @@ public class QuantidadeMinimaItem {
             return ItensPorQuantidade.torta < 10;
         }
 
-        if ("sanduba".equals(item)) {
+        if ("sanduiche".equals(item)) {
             return ItensPorQuantidade.sanduiche == 1;
         }
 
         if ("cafe".equals(item)) {
-            return ItensPorQuantidade.leite < 12;
+            return ItensPorQuantidade.cafe < 12;
         }
 
         if ("leite".equals(item)) {
-            return ItensPorQuantidade.cafe < 12;
+            return ItensPorQuantidade.leite < 12;
         }
 
         return false;
