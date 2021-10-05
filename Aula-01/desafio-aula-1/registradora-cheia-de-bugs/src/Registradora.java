@@ -10,8 +10,8 @@ public class Registradora {
         terceiroBug();
         System.out.println("iniciobug 4");
         quartoBug();
-
-        //  quintoBug();
+        System.out.println("iniciobug 5");
+        quintoBug();
 
         //sextoBug();
     }

@@ -1,6 +1,6 @@
 public class ItensPorQuantidade {
 
-    public static int pao = 3600;
+    public static int pao = 3600/60;
     public static int torta = 4;
     public static int sanduiche = 20;
     public static int leite = 20;
