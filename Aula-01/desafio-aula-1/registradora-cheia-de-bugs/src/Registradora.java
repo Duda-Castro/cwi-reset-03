@@ -2,34 +2,52 @@
 public class Registradora {
 
     public static void main(String[] args) {
+
         primeiroBug();
-
+        System.out.println("iniciobug 2");
         segundoBug();
-
+        System.out.println("iniciobug 3");
         terceiroBug();
+        System.out.println("iniciobug 4");
+        quartoBug();
 
-    //    quartoBug();
-
-      //  quintoBug();
+        //  quintoBug();
 
         //sextoBug();
     }
 
     private static double registrarItem(String item, int quantidade) {
         double precoItem = RelacaoPesoPreco.retornaPrecoProduto(item, quantidade);
+        ReducaoEstoque.reduzEstoque(item,quantidade);
 
         if (QuantidadeMinimaItem.precisaReposicao(item)) {
             if ("pao".equals(item) || "sanduiche".equals(item) || "torta".equals(item)) {
+                if(ItensPorQuantidade.estoqueItem(item) < 0){
+                    System.out.println("Faltam " + ItensPorQuantidade.estoqueItem(item) * -1 + " itens para fechar o pedido.");
+                }else if (ItensPorQuantidade.estoqueItem(item) >= 0){
+                    System.out.println("Restam apenas " + ItensPorQuantidade.estoqueItem(item) + " unidades de " + item);
+                }
+                System.out.println("Solicitar para a cozinha repor estoque de " + item);
                 if (!DataProjeto.cozinhaEmFuncionamento()) {
-                    System.out.println("Cozinha fechada!");
+                    System.out.println("Cozinha fechada, reposição pela manhã! Pedido do cliente agendado para 7:00 a.m.");
                 }
                 ReposicaoCozinha.reporItem(item);
+
             }
 
             if ("leite".equals(item) || "cafe".equals(item)) {
+                if(ItensPorQuantidade.estoqueItem(item) < 0){
+                    System.out.println("Faltam " + ItensPorQuantidade.estoqueItem(item) * -1 + " itens para fechar o pedido.");
+                }else if (ItensPorQuantidade.estoqueItem(item) >= 0){
+                    System.out.println("Restam apenas " + ItensPorQuantidade.estoqueItem(item) + " unidades de " + item);
+                }
+                System.out.println("Solicitar estoque de " + item + " ao fornecedor.");
                 ReposicaoFornecedor.reporItem(item);
+
             }
         }
+
+
 
         return precoItem;
     }
