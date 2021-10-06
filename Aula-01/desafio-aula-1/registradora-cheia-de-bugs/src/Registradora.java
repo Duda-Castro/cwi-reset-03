@@ -12,8 +12,8 @@ public class Registradora {
         quartoBug();
         System.out.println("iniciobug 5");
         quintoBug();
-
-        //sextoBug();
+        System.out.println("iniciobug 6");
+        sextoBug();
     }
 
     private static double registrarItem(String item, int quantidade) {
@@ -29,7 +29,7 @@ public class Registradora {
                 }
                 System.out.println("Solicitar para a cozinha repor estoque de " + item);
                 if (!DataProjeto.cozinhaEmFuncionamento()) {
-                    System.out.println("Cozinha fechada, reposição pela manhã! Pedido do cliente agendado para 7:00 a.m.");
+                    System.out.println("Cozinha fechada, reposição pela manhã! Pedido do cliente agendado para 7:00 a.m. do próximo dia útil.");
                 }
                 ReposicaoCozinha.reporItem(item);
 
