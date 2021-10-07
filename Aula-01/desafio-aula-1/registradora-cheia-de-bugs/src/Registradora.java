@@ -1,4 +1,5 @@
-
+import java.util.Objects;
+import java.util.Scanner;
 public class Registradora {
 
     public static void main(String[] args) {
@@ -18,7 +19,11 @@ public class Registradora {
 
     private static double registrarItem(String item, int quantidade) {
         double precoItem = RelacaoPesoPreco.retornaPrecoProduto(item, quantidade);
+        double pedidoCancelado = 0.00;
         ReducaoEstoque.reduzEstoque(item,quantidade);
+        Scanner scan = new Scanner(System.in);
+        String agendamento = "padrao";
+
 
         if (QuantidadeMinimaItem.precisaReposicao(item)) {
             if ("pao".equals(item) || "sanduiche".equals(item) || "torta".equals(item)) {
@@ -29,7 +34,24 @@ public class Registradora {
                 }
                 System.out.println("Solicitar para a cozinha repor estoque de " + item);
                 if (!DataProjeto.cozinhaEmFuncionamento()) {
-                    System.out.println("Cozinha fechada, reposição pela manhã! Pedido do cliente agendado para 7:00 a.m. do próximo dia útil.");
+
+                    System.out.println("Cozinha fechada, reposição pela manhã! Deseja agendar o seu pedido? (Horário de atendimento: 7:00 - 16:40). (S/N).");
+                    agendamento = scan.next();
+
+                    while(!Objects.equals(agendamento, "S") && !Objects.equals(agendamento, "N")){
+                        System.out.println("Comando inválido, favor digitar novamente (S/N).");
+                        agendamento = scan.next();
+
+                    }
+
+                    if ("S".equals(agendamento)) {
+                                System.out.println("Pedido do cliente agendado para 7:00 a.m. do próximo dia útil.");
+                            } else if ("N".equals(agendamento)) {
+                                System.out.println("Obrigado, tenha um bom dia!");
+
+                            }
+                        }
+
                 }
                 ReposicaoCozinha.reporItem(item);
 
@@ -45,11 +67,13 @@ public class Registradora {
                 ReposicaoFornecedor.reporItem(item);
 
             }
-        }
 
 
 
-        return precoItem;
+        if("S".equals(agendamento) || "padrao".equals(agendamento)){
+        return precoItem;}
+        else{
+            return pedidoCancelado;}
     }
 
     private static void primeiroBug() {
