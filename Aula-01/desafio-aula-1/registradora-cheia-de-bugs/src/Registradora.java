@@ -3,33 +3,38 @@ import java.util.Scanner;
 public class Registradora {
 
     public static void main(String[] args) {
-
-        primeiroBug();
-        System.out.println("iniciobug 2");
-        segundoBug();
-        System.out.println("iniciobug 3");
-        terceiroBug();
-        System.out.println("iniciobug 4");
-        quartoBug();
-        System.out.println("iniciobug 5");
-        quintoBug();
-        System.out.println("iniciobug 6");
-        sextoBug();
+        System.out.println("teste cadastro");
+        cadastrarPedido();
+        System.out.println("inicio bug 1");
+        cadastrarPedido1();
+        System.out.println("inicio bug 2");
+        cadastrarPedido2();
+        System.out.println("inicio bug 3");
+        cadastrarPedido3();
+        System.out.println("inicio bug 4");
+        cadastrarPedido4();
+        System.out.println("inicio bug 5");
+        cadastrarPedido5();
+        System.out.println("inicio bug 6");
+        cadastrarPedido6();
     }
 
-    private static double registrarItem(String item, int quantidade) {
+    private static double registrarItem(String nome, String item, int quantidade) {
         double precoItem = RelacaoPesoPreco.retornaPrecoProduto(item, quantidade);
+        String name = nome;
+        String produto = item;
+        int qtd = quantidade;
         double pedidoCancelado = 0.00;
-        ReducaoEstoque.reduzEstoque(item,quantidade);
+        ReducaoEstoque.reduzEstoque(item, quantidade);
         Scanner scan = new Scanner(System.in);
         String agendamento = "padrao";
 
 
         if (QuantidadeMinimaItem.precisaReposicao(item)) {
             if ("pao".equals(item) || "sanduiche".equals(item) || "torta".equals(item)) {
-                if(ItensPorQuantidade.estoqueItem(item) < 0){
+                if (ItensPorQuantidade.estoqueItem(item) < 0) {
                     System.out.println("Faltam " + ItensPorQuantidade.estoqueItem(item) * -1 + " itens para fechar o pedido.");
-                }else if (ItensPorQuantidade.estoqueItem(item) >= 0){
+                } else if (ItensPorQuantidade.estoqueItem(item) >= 0) {
                     System.out.println("Restam apenas " + ItensPorQuantidade.estoqueItem(item) + " unidades de " + item);
                 }
                 System.out.println("Solicitar para a cozinha repor estoque de " + item);
@@ -38,120 +43,149 @@ public class Registradora {
                     System.out.println("Cozinha fechada, reposição pela manhã! Deseja agendar o seu pedido? (Horário de atendimento: 7:00 - 16:40). (S/N).");
                     agendamento = scan.next();
 
-                    while(!Objects.equals(agendamento, "S") && !Objects.equals(agendamento, "N")){
+                    while (!Objects.equals(agendamento, "S") && !Objects.equals(agendamento, "N")) {
                         System.out.println("Comando inválido, favor digitar novamente (S/N).");
                         agendamento = scan.next();
 
                     }
 
                     if ("S".equals(agendamento)) {
-                                System.out.println("Pedido do cliente agendado para 7:00 a.m. do próximo dia útil.");
-                            } else if ("N".equals(agendamento)) {
-                                System.out.println("Obrigado, tenha um bom dia!");
+                        System.out.println("Pedido do cliente agendado para 7:00 a.m. do próximo dia útil.");
+                    } else if ("N".equals(agendamento)) {
+                        System.out.println("Obrigado, tenha um bom dia!");
 
-                            }
-                        }
-
+                    }
                 }
-                ReposicaoCozinha.reporItem(item);
 
             }
+            ReposicaoCozinha.reporItem(item);
 
-            if ("leite".equals(item) || "cafe".equals(item)) {
-                if(ItensPorQuantidade.estoqueItem(item) < 0){
-                    System.out.println("Faltam " + ItensPorQuantidade.estoqueItem(item) * -1 + " itens para fechar o pedido.");
-                }else if (ItensPorQuantidade.estoqueItem(item) >= 0){
-                    System.out.println("Restam apenas " + ItensPorQuantidade.estoqueItem(item) + " unidades de " + item);
-                }
-                System.out.println("Solicitar estoque de " + item + " ao fornecedor.");
-                ReposicaoFornecedor.reporItem(item);
+        }
 
+        if ("leite".equals(item) || "cafe".equals(item)) {
+            if (ItensPorQuantidade.estoqueItem(item) < 0) {
+                System.out.println("Faltam " + ItensPorQuantidade.estoqueItem(item) * -1 + " itens para fechar o pedido.");
+            } else if (ItensPorQuantidade.estoqueItem(item) >= 0) {
+                System.out.println("Restam apenas " + ItensPorQuantidade.estoqueItem(item) + " unidades de " + item);
             }
+            System.out.println("Solicitar estoque de " + item + " ao fornecedor.");
+            ReposicaoFornecedor.reporItem(item);
+
+        }
 
 
-
-        if("S".equals(agendamento) || "padrao".equals(agendamento)){
-        return precoItem;}
-        else{
-            return pedidoCancelado;}
+        if ("S".equals(agendamento) || "padrao".equals(agendamento)) {
+            Recibo.recibo(name, produto, qtd);
+            return precoItem;
+        } else {
+            return pedidoCancelado;
+        }
     }
 
-    private static void primeiroBug() {
+
+    private static void cadastrarPedido() {
         DataProjeto.criarDataComCozinhaFuncionando();
+        Scanner scan = new Scanner(System.in);
+        String nome;
+        System.out.println("Digite o nome do cliente: ");
+        nome = scan.next();
+        String item;
+        System.out.println("Digite o produto: ");
+        item = scan.next();
+        int quantidade;
+        System.out.println("Digite a quantidade: ");
+        quantidade = scan.nextInt();
+
+        registrarItem(nome, item, quantidade);
+
+
+    }
+
+    private static void cadastrarPedido1() {
+        DataProjeto.criarDataComCozinhaFuncionando();
+        String nome = "Luke";
         String item = "sanduiche";
         int quantidade = 4;
 
-        double precoTotal = registrarItem(item, quantidade);
+        registrarItem(nome, item, quantidade);
 
-        System.out.println(String.format("Valor total: %.2f", precoTotal));
+
     }
 
-    private static void segundoBug() {
+    private static void cadastrarPedido2() {
         DataProjeto.criarDataComCozinhaEncerradaMasComDiaUtil();
+        String nome = "Duda";
         String item = "torta";
         int quantidade = 10;
 
-        double precoTotal = registrarItem(item, quantidade);
+        registrarItem(nome, item, quantidade);
 
-        System.out.println(String.format("Valor total: %.2f", precoTotal));
+
     }
 
-    private static void terceiroBug() {
+    private static void cadastrarPedido3() {
         DataProjeto.criarDataComCozinhaFuncionando();
+        String nome = "Léia";
         String item = "cafe";
         int quantidade = 40;
 
-        double precoTotal = registrarItem(item, quantidade);
+        registrarItem(nome, item, quantidade);
 
-        System.out.println(String.format("Valor total: %.2f", precoTotal));
+
     }
 
-    private static void quartoBug() {
+    private static void cadastrarPedido4() {
         DataProjeto.criarDataComCozinhaFuncionando();
-        // Cliente 1
+        //cliente 1
+        String nome = "Chewie";
         String item = "sanduiche";
         int quantidade = 20;
 
-        double precoTotal = registrarItem(item, quantidade);
+        registrarItem(nome, item, quantidade);
+        //cliente 2
+        nome = "Carlos";
+        item = "sanduiche";
+        quantidade = 5;
 
-        System.out.println(String.format("Valor total: %.2f", precoTotal));
+        registrarItem(nome, item, quantidade);
 
-        // Cliente 2
-        String item2 = "sanduiche";
-        int quantidade2 = 5;
 
-        double precoTotal2 = registrarItem(item2, quantidade2);
-
-        System.out.println(String.format("Valor total: %.2f", precoTotal2));
     }
 
-    private static void quintoBug() {
+    private static void cadastrarPedido5() {
         DataProjeto.criarDataComCozinhaFuncionando();
+
+        String nome = "Han";
         String item = "pao";
         int quantidade = 10;
 
-        double precoTotal = registrarItem(item, quantidade);
+        registrarItem(nome, item, quantidade);
 
-        System.out.println(String.format("Valor total: %.2f", precoTotal));
+
     }
 
-    private static void sextoBug() {
-        DataProjeto.criarDataComCozinhaEncerradaSemDiaUtil();
-        // Cliente 1
+    private static void cadastrarPedido6() {
+        DataProjeto.criarDataComCozinhaFuncionando();
+        //cliente 1
+        String nome = "Jarjar";
         String item = "sanduiche";
         int quantidade = 20;
 
-        double precoTotal = registrarItem(item, quantidade);
+        registrarItem(nome, item, quantidade);
+        //cliente 2
+        nome = "Jabba";
+        item = "sanduiche";
+        quantidade = 5;
 
-        System.out.println(String.format("Valor total: %.2f", precoTotal));
+        registrarItem(nome, item, quantidade);
 
-        // Cliente 2
-        String item2 = "sanduiche";
-        int quantidade2 = 5;
 
-        double precoTotal2 = registrarItem(item2, quantidade2);
-
-        System.out.println(String.format("Valor total: %.2f", precoTotal2));
     }
 
 }
+
+
+
+
+
+
