@@ -1,17 +1,17 @@
 import java.util.Scanner;
 public class Aplicacao {
 
-    Scanner teclado = new Scanner(System.in);
+    public static void main (String[] args) {
+        Diretor diretor1= new Diretor ("Ari Aster",35,2);
+        Filme hereditario = new Filme("Hereditario", "Criança encapetada", 1, 30, 2018, 5.0);
 
-    Filme filme1 = new Filme(teclado.next(),teclado.next(),teclado.nextInt(),teclado.nextInt(),teclado.nextInt(),teclado.nextInt()
-            teclado.next(),teclado.nextInt(),teclado.nextInt());
-
-    filme1.reproduzir();
-
-
-    Filme filme2 = new Filme(teclado.next(),teclado.next(),teclado.nextInt(),teclado.nextInt(),teclado.nextInt(),teclado.nextInt()
-            teclado.next(),teclado.nextInt(),teclado.nextInt());
+        hereditario.reproduzir();
 
 
+        Diretor diretor2= new Diretor ("Tarantino",58,10);
+        Filme jango = new Filme("Jango", "Tiroteio e racismo", 1, 30, 2012, 5.0);
 
+        jango.reproduzir();
+
+    }
 }
