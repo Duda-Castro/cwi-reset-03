@@ -9,14 +9,14 @@ public class Filme {
     private Diretor diretor;
 
     public Filme(String nome, String descricao, int duracaoHora, int duracaoMinutos, int ano,
-                 double avaliacao) {
+                 double avaliacao,Diretor diretor) {
         this.nome = nome;
         this.descricao = descricao;
         this.duracaoHora = duracaoHora;
         this.duracaoMinutos = duracaoMinutos;
         this.ano = ano;
         this.avaliacao = avaliacao;
-
+        this.diretor = diretor;
     }
 
     public void reproduzir(){
