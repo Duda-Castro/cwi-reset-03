@@ -17,8 +17,13 @@ public class Pessoa {
         System.out.println("Genero: " + genero.getDescricao());
     }
 
+    public String getNome() {
+        return nome;
+    }
 
-
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }
 
 
