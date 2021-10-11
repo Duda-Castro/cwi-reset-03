@@ -1,15 +1,33 @@
-public class Diretor extends Pessoa {
+public class Diretor {
 
-    private int qtdFilmes;
+private String nome;
+private int idade;
+private int qtdFilmes;
+private Genero genero;
 
 
     public Diretor(int qtdFilmes,String nome,int dataDeNascimento,Genero genero) {
 
         super(nome,dataDeNascimento,genero);
-        this.qtdFilmes = qtdFilmes;
 
+    public Diretor(String nome, int idade, int qtdFilmes,Genero genero) {
+        this.nome = nome;
+        this.idade = idade;
+        this.qtdFilmes = qtdFilmes;
+        this.genero = genero;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+
+    public void ficha(){
+        System.out.println("//////////////// Ficha Cadastral do Diretor: ////////////////");
+        System.out.println("Nome: " + nome);
+        System.out.println("Idade: " + idade);
+        System.out.println("Genero: " + genero.getDescricao());
+    }
 
 
 
