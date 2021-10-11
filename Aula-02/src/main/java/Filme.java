@@ -9,7 +9,13 @@ public class Filme {
     private Diretor diretor;
 
     public Filme(String nome, String descricao, int duracaoHora, int duracaoMinutos, int ano,
-                 double avaliacao,Diretor diretor) {
+                 double avaliacao,Diretor diretor) throws AvaliacaoForaDoPadraoException {
+
+        if(avaliacao<1 || avaliacao > 5){
+            throw new AvaliacaoForaDoPadraoException();
+
+        }
+
         this.nome = nome;
         this.descricao = descricao;
         this.duracaoHora = duracaoHora;
