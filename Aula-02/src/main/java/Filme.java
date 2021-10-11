@@ -17,7 +17,20 @@ public class Filme {
         this.ano = ano;
         this.avaliacao = avaliacao;
         this.diretor = diretor;
+
+
+
+        try{
+
+            this.getAvaliacao();
+
+        }catch{
+
+
+        }
     }
+
+
 
     public void reproduzir(){
 
@@ -29,10 +42,8 @@ public class Filme {
 
 
     }
-
-
-
-
-
+    public double getAvaliacao() {
+        return avaliacao;
+    }
 
 }

@@ -9,6 +9,8 @@ public class Aplicacao {
         diretor1.ficha();
 
 
+
+
         Diretor diretor2= new Diretor (10,"Tarantino",58,Genero.MASCULINO);
         Filme jango = new Filme("Jango", "Tiroteio e racismo", 1, 30, 2012, 5.0, diretor2);
 

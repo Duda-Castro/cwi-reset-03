@@ -5,9 +5,9 @@ public class Ator extends Pessoa {
 
 
 
-    public Ator(int oscar,String nome,int idade,Genero genero) {
+    public Ator(int oscar,String nome,int dataDeNascimento,Genero genero) {
 
-        super(nome,idade,genero);
+        super(nome,dataDeNascimento,genero);
         this.oscar = oscar;
 
     }
