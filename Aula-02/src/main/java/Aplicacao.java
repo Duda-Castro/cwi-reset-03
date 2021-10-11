@@ -1,20 +1,16 @@
-import java.util.Scanner;
+import java.time.LocalDate;
 public class Aplicacao {
 
     public static void main (String[] args) {
-        Diretor diretor1= new Diretor (2,"Ari Aster",35,Genero.MASCULINO);
+        Diretor diretor1 = new Diretor (5,"Ari Aster",LocalDate.of(1996, 6, 14), Genero.MASCULINO);
         Filme hereditario = new Filme("Hereditario", "Criança encapetada", 1, 30, 2018, 5.0, diretor1);
 
-        hereditario.reproduzir();
         diretor1.ficha();
+        hereditario.reproduzir();
 
 
-
-
-        Diretor diretor2= new Diretor (10,"Tarantino",58,Genero.MASCULINO);
-        Filme jango = new Filme("Jango", "Tiroteio e racismo", 1, 30, 2012, 5.0, diretor2);
-
-        jango.reproduzir();
+        Ator ator = new Ator(5, "Teste", LocalDate.of(1996, 6, 14), Genero.FEMININO);
+        ator.ficha();
 
     }
 }

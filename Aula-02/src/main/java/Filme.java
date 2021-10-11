@@ -20,14 +20,7 @@ public class Filme {
 
 
 
-        try{
 
-            this.getAvaliacao();
-
-        }catch{
-
-
-        }
     }
 
 
@@ -42,8 +35,5 @@ public class Filme {
 
 
     }
-    public double getAvaliacao() {
-        return avaliacao;
-    }
-
 }
+
