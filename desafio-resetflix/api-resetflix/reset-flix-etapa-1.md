@@ -48,29 +48,29 @@ Para iniciarmos o projeto vamos seguir a seguinte estrutura:
   - EM_ATIVIDADE OK
   - ENCERRADO OK
 
-### Filme
+### Filme OK
 
-- id
-- nome
-- anoLancamento
-- capaFilme
-- List:Genero generos
-  - ACAO
-  - AVENTURA
-  - COMEDIA
-  - DOCUMENTARIO
-  - DRAMA
-  - ESPIONAGEM
-  - FICCAO_CIENTIFICA
-  - GUERRA
-  - MISTERIO
-  - MUSICAL
-  - POLICIAL
-  - ROMANCE
-  - TERROR
-- Diretor diretor
-- List:PersonagemAtor personagens
-- resumo
+- id OK
+- nome OK
+- anoLancamento OK
+- capaFilme OK
+- List:Genero generos OK
+  - ACAO OK
+  - AVENTURA OK
+  - COMEDIA OK
+  - DOCUMENTARIO OK
+  - DRAMA OK
+  - ESPIONAGEM OK
+  - FICCAO_CIENTIFICA OK
+  - GUERRA OK
+  - MISTERIO OK
+  - MUSICAL OK
+  - POLICIAL OK
+  - ROMANCE OK
+  - TERROR OK
+- Diretor diretor OK
+- List:PersonagemAtor personagens OK
+- resumo OK
 
 ### PersonagemAtor
 
