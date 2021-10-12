@@ -72,15 +72,15 @@ Para iniciarmos o projeto vamos seguir a seguinte estrutura:
 - List:PersonagemAtor personagens OK
 - resumo OK
 
-### PersonagemAtor
+### PersonagemAtor OK
 
-- id
-- Ator ator
-- nomePersonagem
-- descricaoPersonagem
-- TipoAtuacao tipoAtuacao
-  - PRINCIPAL
-  - COADJUVANTE
+- id OK
+- Ator ator OK
+- nomePersonagem OK
+- descricaoPersonagem OK
+- TipoAtuacao tipoAtuacao OK
+  - PRINCIPAL OK
+  - COADJUVANTE OK
 
 ## Funcionalidades
 
