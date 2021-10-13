@@ -11,6 +11,7 @@ public class Filme {
     public Filme(String nome, String descricao, int duracaoHora, int duracaoMinutos, int ano,
                  double avaliacao,Diretor diretor) throws AvaliacaoForaDoPadraoException {
 
+
         if(avaliacao<1 || avaliacao > 5){
             throw new AvaliacaoForaDoPadraoException();
 

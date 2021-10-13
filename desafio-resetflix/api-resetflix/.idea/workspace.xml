@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="081d6fba-df4d-4fec-9868-eb7faa266327" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Generos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/AtorRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula-02/src/main/java/Filme.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-02/src/main/java/Filme.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reset-flix-etapa-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/reset-flix-etapa-1.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Aplicacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Aplicacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Filme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Filme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/PersonagemAtor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/PersonagemAtor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Ator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Ator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/AtorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/AtorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Diretor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Diretor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Pessoa.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +53,26 @@
       <recent name="D:\ResetLevel2\cwi-reset-03\desafio-resetflix\api-resetflix" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Aplicacao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.cwi.reset.dudacastro.Aplicacao" />
+      <module name="api-resetflix" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.cwi.reset.dudacastro.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Aplicacao" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,5 +94,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="List&lt;Ator&gt; atores = fakeDatabase.recuperaAtores(); " language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

@@ -4,12 +4,29 @@ import java.time.LocalDate;
 
 public class Ator extends Pessoa{
 
-
+    private Integer id;
+    private Integer contador = 1;
     private StatusCarreira statusCarreira;
 
-    public Ator(Integer id, String nome, LocalDate dataNascimento, StatusCarreira statusCarreira, Integer anoInicioAtividade) {
-        super (id, nome, dataNascimento, anoInicioAtividade);
+    public Ator(String nome, LocalDate dataNascimento, StatusCarreira statusCarreira, Integer anoInicioAtividade) {
+        super (nome, dataNascimento, anoInicioAtividade);
         this.statusCarreira = statusCarreira;
+        this.id = contador;
+        contador = contador + 1;
+
+
     }
 
+
+
+
+    public StatusCarreira getStatusCarreira() {
+        return statusCarreira;
+    }
+
+    public void setStatusCarreira(StatusCarreira statusCarreira) {
+        this.statusCarreira = statusCarreira;
+    }
 }
+
+

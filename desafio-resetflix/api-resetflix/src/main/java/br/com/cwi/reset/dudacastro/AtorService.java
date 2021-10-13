@@ -1,8 +1,7 @@
 package br.com.cwi.reset.dudacastro;
-import java.time.LocalDate;
-import java.time.Month;
 
 public class AtorService {
+
 
     private FakeDatabase fakeDatabase;
 
@@ -11,4 +10,15 @@ public class AtorService {
     }
 
     // Demais métodos da classe
+
+
+
+    public void criarAtor(AtorRequest atorRequest){
+
+    fakeDatabase.persisteAtor(atorRequest);
+
+
+
+    }
+
 }
