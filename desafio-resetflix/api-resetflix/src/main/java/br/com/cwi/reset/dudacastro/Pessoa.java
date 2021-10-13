@@ -10,16 +10,14 @@ public class Pessoa {
     private LocalDate dataNascimento;
     private Integer anoInicioAtividade;
 
-    public Pessoa(Integer id, String nome, LocalDate dataNascimento, Integer anoInicioAtividade) {
+    public Pessoa(String nome, LocalDate dataNascimento, Integer anoInicioAtividade) {
 
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.anoInicioAtividade = anoInicioAtividade;
     }
 
-    public Pessoa(String nome, LocalDate dataNascimento, Integer anoInicioAtividade) {
 
-    }
 
 
     public void setNome(String nome) {

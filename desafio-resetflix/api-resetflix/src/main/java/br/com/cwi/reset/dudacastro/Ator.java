@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Ator extends Pessoa{
 
-    private Integer id;
+    protected Integer id;
     private Integer contador = 1;
     private StatusCarreira statusCarreira;
 
@@ -18,15 +18,11 @@ public class Ator extends Pessoa{
     }
 
 
-
-
     public StatusCarreira getStatusCarreira() {
         return statusCarreira;
     }
 
-    public void setStatusCarreira(StatusCarreira statusCarreira) {
-        this.statusCarreira = statusCarreira;
-    }
+
 }
 
 

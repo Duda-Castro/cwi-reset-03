@@ -12,11 +12,12 @@ public class AtorService {
     // Demais métodos da classe
 
 
+    public void criarAtor(AtorRequest atorRequest) {
 
-    public void criarAtor(AtorRequest atorRequest){
 
-    fakeDatabase.persisteAtor(atorRequest);
+        Ator ator = new Ator(atorRequest.getNome(), atorRequest.getDataNascimento(), atorRequest.getStatusCarreira(), atorRequest.getAnoInicioAtividade());
 
+        fakeDatabase.persisteAtor(ator);
 
 
     }
