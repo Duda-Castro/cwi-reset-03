@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="081d6fba-df4d-4fec-9868-eb7faa266327" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/AnoDeAtividadeInvalido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/CampoObrigatorioNaoInformadoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/DeveSerInformadoPeloMenosNomeESobrenome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/NaoNascidos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/NomeIgual.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Ator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Ator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/AtorRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/AtorRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/AtorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/AtorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reset-flix-etapa-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/reset-flix-etapa-1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Aplicacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Aplicacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Pessoa.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Aula-02/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../clonado/edicao-03-level-2/Aula-02/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -95,31 +100,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Aplicacao.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/AtorService.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/FakeDatabase.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Aplicacao.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Aplicacao.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="br.com.cwi.reset.dudacastro.CampoObrigatorioNaoInformadoException" package="br.com.cwi.reset.dudacastro" />
+          <option name="timeStamp" value="11" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

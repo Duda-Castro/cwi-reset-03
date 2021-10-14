@@ -96,25 +96,25 @@ Para iniciarmos o projeto vamos seguir a seguinte estrutura:
 
   AtorRequest
 
-  - nome*
-  - dataNascimento*
-  - StatusCarreira statusCarreira*
-    - EM_ATIVIDADE
-    - APOSENTADO
-  - anoInicioAtividade*
-- Característica: Incluir um novo ator a lista de atores
+  - nome* OK
+  - dataNascimento* OK
+  - StatusCarreira statusCarreira* OK
+    - EM_ATIVIDADE OK
+    - APOSENTADO OK
+  - anoInicioAtividade* OK
+- Característica: Incluir um novo ator a lista de atores OK
 - Regras
-  - Campos com * são campos obrigatórios
-    - Mensagem de erro: "Campo obrigatório não informado. Favor informar o campo {campo}."
-  - O id (numérico) do ator deve ser gerado automáticamente de forma sequencial
-  - Deve obrigar pelo menos nome e sobrenome do ator
-    - Mensagem de erro: "Deve ser informado no mínimo nome e sobrenome para o ator."
-  - A data de nascimento não pode ser maior que a data atual
-    - Mensagem de erro: "Não é possível cadastrar atores não nascidos."
-  - O ano de início de atividade não pode ser anterior ao ano de nascimento do ator
-    - Mensagem de erro: "Ano de início de atividade inválido para o ator cadastrado."
-  - Não deve ser permitido cadastrar dois atores com o mesmo nome
-    - Mensagem de erro: "Já existe um ator cadastrado para o nome {nome}."
+  -  OK Campos com * são campos obrigatórios 
+    - OK Mensagem de erro: "Campo obrigatório não informado. Favor informar o campo {campo}."
+  - OK O id (numérico) do ator deve ser gerado automáticamente de forma sequencial
+  - OK Deve obrigar pelo menos nome e sobrenome do ator
+    -OK Mensagem de erro: "Deve ser informado no mínimo nome e sobrenome para o ator."
+  - OK A data de nascimento não pode ser maior que a data atual
+    -OK  Mensagem de erro: "Não é possível cadastrar atores não nascidos."
+  -OK  O ano de início de atividade não pode ser anterior ao ano de nascimento do ator
+    -OK  Mensagem de erro: "Ano de início de atividade inválido para o ator cadastrado."
+  - OK Não deve ser permitido cadastrar dois atores com o mesmo nome
+    - OK Mensagem de erro: "Já existe um ator cadastrado para o nome {nome}."
 
 #### 1.2. Listar atores
 
