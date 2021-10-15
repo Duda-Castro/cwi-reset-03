@@ -1,7 +1,5 @@
 package br.com.cwi.reset.dudacastro.model;
 
-import br.com.cwi.reset.dudacastro.Pessoa;
-
 import java.time.LocalDate;
 
 public class Diretor extends Pessoa {
