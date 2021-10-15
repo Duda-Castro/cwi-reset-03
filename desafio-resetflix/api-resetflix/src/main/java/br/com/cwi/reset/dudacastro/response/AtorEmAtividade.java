@@ -1,37 +1,28 @@
 package br.com.cwi.reset.dudacastro.response;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
+public class AtorEmAtividade {
 
-public class AtorEmAtividade extends Ator {
+    private Integer id;
+    private String nome;
+    private LocalDate dataNascimento;
 
-    public AtorEmAtividade(String nome, LocalDate dataNascimento, StatusCarreira statusCarreira, Integer anoInicioAtividade) {
-        super(nome, dataNascimento, statusCarreira, anoInicioAtividade);
+    public AtorEmAtividade(Integer id, String nome, LocalDate dataNascimento) {
+        this.id = id;
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
     }
 
-    List<AtorEmAtividade> atoresEmAtividade= new ArrayList<>();
-    List<AtorEmAtividade> atoresEmAtividadeFiltroNome = new ArrayList<>();
-
-    public void novoAtorEmAtividade(AtorEmAtividade atorEmAtividade) {
-
-        atoresEmAtividade.add(atorEmAtividade);
+    public Integer getId() {
+        return id;
     }
 
-    public List<AtorEmAtividade> recuperaAtoresEmAtividade() {
-        return atoresEmAtividade;
+    public String getNome() {
+        return nome;
     }
 
-    public void novoAtorEmAtividadeFiltroNome(AtorEmAtividade atorEmAtividadeFiltroNome) {
-
-        atoresEmAtividadeFiltroNome.add(atorEmAtividadeFiltroNome);
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
     }
-
-    public List<AtorEmAtividade> recuperaAtoresEmAtividadeFiltroNome() {
-        return atoresEmAtividadeFiltroNome;
-    }
-
-
-
 }

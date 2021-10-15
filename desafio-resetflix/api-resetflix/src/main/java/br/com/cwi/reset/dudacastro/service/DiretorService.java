@@ -1,71 +1,81 @@
 package br.com.cwi.reset.dudacastro.service;
 
-import br.com.cwi.reset.dudacastro.response.AtorEmAtividade;
 import br.com.cwi.reset.dudacastro.FakeDatabase;
-import br.com.cwi.reset.dudacastro.request.AtorRequest;
+import br.com.cwi.reset.dudacastro.exceptions.*;
+import br.com.cwi.reset.dudacastro.model.Diretor;
+import br.com.cwi.reset.dudacastro.request.DiretorRequest;
+import br.com.cwi.reset.dudacastro.validator.BasicInfoRequiredValidator;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class DiretorService {
 
-
     private FakeDatabase fakeDatabase;
-    private AtorEmAtividade atorEmAtividade;
-    private AtorEmAtividade atorEmAtividadeFiltroNome;
 
     public DiretorService(FakeDatabase fakeDatabase) {
         this.fakeDatabase = fakeDatabase;
     }
-    public DiretorService(AtorEmAtividade atorEmAtividade) {
-        this.atorEmAtividade = atorEmAtividade;
-    }
 
+    public void cadastrarDiretor(final DiretorRequest diretorRequest) throws Exception {
+        new BasicInfoRequiredValidator().accept(diretorRequest.getNome(), diretorRequest.getDataNascimento(), diretorRequest.getAnoInicioAtividade(), TipoDominioException.DIRETOR);
 
-    // Demais métodos da classe
+        final List<Diretor> diretoresCadastrados = fakeDatabase.recuperaDiretores();
 
-
-    public void cadastrarDiretor (AtorRequest atorRequest) {
-
-
-        Ator ator = new Ator(atorRequest.getNome(), atorRequest.getDataNascimento(), atorRequest.getStatusCarreira(), atorRequest.getAnoInicioAtividade());
-
-        fakeDatabase.persisteAtor(ator);
-
-        if(ator.getStatusCarreira() == StatusCarreira.EM_ATIVIDADE){
-
-            AtorEmAtividade atorEmAtividade = new AtorEmAtividade(atorRequest.getNome(), atorRequest.getDataNascimento(), atorRequest.getStatusCarreira(), atorRequest.getAnoInicioAtividade());
-            atorEmAtividade.novoAtorEmAtividade(atorEmAtividade);
+        for (Diretor diretorCadastrado : diretoresCadastrados) {
+            if (diretorCadastrado.getNome().equalsIgnoreCase(diretorRequest.getNome())) {
+                throw new CadastroDuplicadoException(TipoDominioException.DIRETOR.getSingular(), diretorRequest.getNome());
+            }
         }
 
+        final Integer idGerado = diretoresCadastrados.size() + 1;
+
+        final Diretor diretor = new Diretor(idGerado, diretorRequest.getNome(), diretorRequest.getDataNascimento(), diretorRequest.getAnoInicioAtividade());
+
+        fakeDatabase.persisteDiretor(diretor);
     }
 
+    public List<Diretor> listarDiretores(final String filtroNome) throws Exception {
+        final List<Diretor> diretoresCadastrados = fakeDatabase.recuperaDiretores();
 
+        if (diretoresCadastrados.isEmpty()) {
+            throw new ListaVaziaException(TipoDominioException.DIRETOR.getSingular(), TipoDominioException.DIRETOR.getPlural());
+        }
 
+        final List<Diretor> retorno = new ArrayList<>();
 
-    public List<AtorEmAtividade> listarAtoresEmAtividade(String filtroNome){
-        if(filtroNome == null || filtroNome == ""){
-
-            return atorEmAtividade.recuperaAtoresEmAtividade();
-
-
-        }else{
-            List<AtorEmAtividade> atorEmAtividadeFiltroNome = atorEmAtividade.recuperaAtoresEmAtividade();
-            for(Integer i=0;i< filtroNome.length() ;i++){
-                for(Integer g=0;i< atorEmAtividade.recuperaAtoresEmAtividade().size();i++){
-                    if(filtroNome.charAt(i) == atorEmAtividade.getNome().charAt(g)){
-                        atorEmAtividade.novoAtorEmAtividadeFiltroNome(atorEmAtividade);
-
-                    }
-                    break;
+        if (filtroNome != null) {
+            for (Diretor diretor : diretoresCadastrados) {
+                final boolean containsFilter = diretor.getNome().toLowerCase(Locale.ROOT).contains(filtroNome.toLowerCase(Locale.ROOT));
+                if (containsFilter) {
+                    retorno.add(diretor);
                 }
+            }
+        } else {
+            retorno.addAll(diretoresCadastrados);
+        }
 
-                }
-            return atorEmAtividade.recuperaAtoresEmAtividadeFiltroNome();
+        if (retorno.isEmpty()) {
+            throw new FiltroNomeNaoEncontrado("Diretor", filtroNome);
+        }
 
-
-
+        return retorno;
     }
 
+    public Diretor consultarDiretor(final Integer id) throws Exception {
+        if (id == null) {
+            throw new IdNaoInformado();
+        }
 
-}
+        final List<Diretor> diretores = fakeDatabase.recuperaDiretores();
+
+        for (Diretor diretor : diretores) {
+            if (diretor.getId().equals(id)) {
+                return diretor;
+            }
+        }
+
+        throw new ConsultaIdInvalidoException(TipoDominioException.DIRETOR.getSingular(), id);
+    }
 }

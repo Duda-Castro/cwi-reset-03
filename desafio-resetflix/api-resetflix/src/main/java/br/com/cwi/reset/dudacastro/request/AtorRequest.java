@@ -1,11 +1,11 @@
 package br.com.cwi.reset.dudacastro.request;
 
+
+import br.com.cwi.reset.dudacastro.model.StatusCarreira;
+
 import java.time.LocalDate;
 
-public class AtorRequest{
-
-
-
+public class AtorRequest {
     private String nome;
     private LocalDate dataNascimento;
     private StatusCarreira statusCarreira;
