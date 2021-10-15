@@ -1,8 +1,10 @@
-package br.com.cwi.reset.dudacastro;
+package br.com.cwi.reset.dudacastro.request;
+
+import br.com.cwi.reset.dudacastro.model.StatusCarreira;
 
 import java.time.LocalDate;
 
-public class AtorRequest{
+public class DiretorRequest {
 
 
 
@@ -11,7 +13,7 @@ public class AtorRequest{
     private StatusCarreira statusCarreira;
     private Integer anoInicioAtividade;
 
-    public AtorRequest(String nome, LocalDate dataNascimento, StatusCarreira statusCarreira, Integer anoInicioAtividade) {
+    public DiretorRequest(String nome, LocalDate dataNascimento, StatusCarreira statusCarreira, Integer anoInicioAtividade) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.statusCarreira = statusCarreira;

@@ -5,11 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="081d6fba-df4d-4fec-9868-eb7faa266327" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/AtorEmAtividade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/request/DiretorRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/service/DiretorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/AnoDeAtividadeInvalido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exceptions/AnoDeAtividadeInvalido.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Aplicacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Aplicacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Ator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Ator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/AtorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/AtorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Ator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/model/Ator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/AtorEmAtividade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/response/AtorEmAtividade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/AtorRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/request/AtorRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/AtorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/service/AtorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/CampoObrigatorioNaoInformadoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exceptions/CampoObrigatorioNaoInformadoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/DeveSerInformadoPeloMenosNomeESobrenome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exceptions/DeveSerInformadoPeloMenosNomeESobrenome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Diretor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/model/Diretor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Estudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/model/Estudio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/FakeDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/FakeDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Filme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/model/Filme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/Generos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/model/Genero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/NaoNascidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exceptions/NaoNascidos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/NomeIgual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exceptions/NomeIgual.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/PersonagemAtor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/model/PersonagemAtor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/StatusAtividade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/model/StatusAtividade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/StatusCarreira.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/model/StatusCarreira.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/TipoAtuacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/model/TipoAtuacao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +66,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\ResetLevel2\cwi-reset-03\desafio-resetflix\api-resetflix" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.cwi.reset.dudacastro" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Aplicacao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -56,7 +76,7 @@
       <module name="api-resetflix" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.cwi.reset.dudacastro.*" />
+          <option name="PATTERN" value="br.com.cwi.reset.dudacastro.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

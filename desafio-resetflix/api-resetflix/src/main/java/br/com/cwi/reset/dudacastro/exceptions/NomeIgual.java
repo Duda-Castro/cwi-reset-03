@@ -1,4 +1,4 @@
-package br.com.cwi.reset.dudacastro;
+package br.com.cwi.reset.dudacastro.exceptions;
 
 public class NomeIgual extends Exception{
 

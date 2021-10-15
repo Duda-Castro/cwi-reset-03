@@ -1,5 +1,8 @@
 package br.com.cwi.reset.dudacastro;
 
+import br.com.cwi.reset.dudacastro.model.Ator;
+import br.com.cwi.reset.dudacastro.model.Diretor;
+
 import java.util.ArrayList;
 import java.util.List;
 

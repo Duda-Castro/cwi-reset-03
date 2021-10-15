@@ -1,4 +1,4 @@
-package br.com.cwi.reset.dudacastro;
+package br.com.cwi.reset.dudacastro.model;
 
 import java.util.Arrays;
 import java.util.List;

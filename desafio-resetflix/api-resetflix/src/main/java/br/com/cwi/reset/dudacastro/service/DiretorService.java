@@ -1,18 +1,24 @@
-package br.com.cwi.reset.dudacastro;
+package br.com.cwi.reset.dudacastro.service;
+
+import br.com.cwi.reset.dudacastro.response.AtorEmAtividade;
+import br.com.cwi.reset.dudacastro.FakeDatabase;
+import br.com.cwi.reset.dudacastro.model.Ator;
+import br.com.cwi.reset.dudacastro.model.StatusCarreira;
+import br.com.cwi.reset.dudacastro.request.AtorRequest;
 
 import java.util.List;
 
-public class AtorService {
+public class DiretorService {
 
 
     private FakeDatabase fakeDatabase;
     private AtorEmAtividade atorEmAtividade;
     private AtorEmAtividade atorEmAtividadeFiltroNome;
 
-    public AtorService(FakeDatabase fakeDatabase) {
+    public DiretorService(FakeDatabase fakeDatabase) {
         this.fakeDatabase = fakeDatabase;
     }
-    public AtorService(AtorEmAtividade atorEmAtividade) {
+    public DiretorService(AtorEmAtividade atorEmAtividade) {
         this.atorEmAtividade = atorEmAtividade;
     }
 
@@ -20,7 +26,7 @@ public class AtorService {
     // Demais métodos da classe
 
 
-    public void criarAtor(AtorRequest atorRequest) {
+    public void cadastrarDiretor (AtorRequest atorRequest) {
 
 
         Ator ator = new Ator(atorRequest.getNome(), atorRequest.getDataNascimento(), atorRequest.getStatusCarreira(), atorRequest.getAnoInicioAtividade());
@@ -29,8 +35,8 @@ public class AtorService {
 
         if(ator.getStatusCarreira() == StatusCarreira.EM_ATIVIDADE){
 
-            AtorEmAtividade atorAtivo = new AtorEmAtividade(atorRequest.getNome(), atorRequest.getDataNascimento(), atorRequest.getStatusCarreira(), atorRequest.getAnoInicioAtividade());
-            atorEmAtividade.novoAtorEmAtividade(atorAtivo);
+            AtorEmAtividade atorEmAtividade = new AtorEmAtividade(atorRequest.getNome(), atorRequest.getDataNascimento(), atorRequest.getStatusCarreira(), atorRequest.getAnoInicioAtividade());
+            atorEmAtividade.novoAtorEmAtividade(atorEmAtividade);
         }
 
     }
@@ -56,10 +62,10 @@ public class AtorService {
                 }
 
                 }
-            return atorEmAtividadeFiltroNome.recuperaAtoresEmAtividadeFiltroNome();
+            return atorEmAtividade.recuperaAtoresEmAtividadeFiltroNome();
 
 
-        return null;
+
     }
 
 

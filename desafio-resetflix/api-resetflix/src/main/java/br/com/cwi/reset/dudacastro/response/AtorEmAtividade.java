@@ -1,11 +1,14 @@
-package br.com.cwi.reset.dudacastro;
+package br.com.cwi.reset.dudacastro.response;
+
+import br.com.cwi.reset.dudacastro.model.Ator;
+import br.com.cwi.reset.dudacastro.model.StatusCarreira;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class AtorEmAtividade extends Ator{
+public class AtorEmAtividade extends Ator {
 
     public AtorEmAtividade(String nome, LocalDate dataNascimento, StatusCarreira statusCarreira, Integer anoInicioAtividade) {
         super(nome, dataNascimento, statusCarreira, anoInicioAtividade);

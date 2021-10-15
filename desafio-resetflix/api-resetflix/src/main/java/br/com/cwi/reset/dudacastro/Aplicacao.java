@@ -1,10 +1,15 @@
 package br.com.cwi.reset.dudacastro;
 
+import br.com.cwi.reset.dudacastro.exceptions.*;
+import br.com.cwi.reset.dudacastro.model.Ator;
+import br.com.cwi.reset.dudacastro.model.StatusCarreira;
+import br.com.cwi.reset.dudacastro.request.AtorRequest;
+import br.com.cwi.reset.dudacastro.service.AtorService;
+
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
 import java.util.Objects;
-import java.time.LocalDateTime;
 import java.time.Period;
 
 public class Aplicacao {
