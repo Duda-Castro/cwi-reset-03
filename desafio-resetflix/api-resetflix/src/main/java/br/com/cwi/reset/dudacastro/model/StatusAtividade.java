@@ -1,19 +1,6 @@
 package br.com.cwi.reset.dudacastro.model;
 
 public enum StatusAtividade {
-
-    EM_ATIVIDADE("Em Atividade"),
-    ENCERRADO("Encerrado");
-
-    private String descricao;
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-
-    StatusAtividade(String descricao) {
-        this.descricao = descricao;
-
-    }
+    EM_ATIVIDADE,
+    ENCERRADO;
 }

@@ -1,8 +1,5 @@
 package br.com.cwi.reset.dudacastro.response;
 
-import br.com.cwi.reset.dudacastro.model.Ator;
-import br.com.cwi.reset.dudacastro.model.StatusCarreira;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;

@@ -38,8 +38,3 @@ public class Ator {
         return anoInicioAtividade;
     }
 }
-
-
-}
-
-

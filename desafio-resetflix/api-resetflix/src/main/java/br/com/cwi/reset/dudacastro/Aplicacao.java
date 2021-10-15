@@ -1,8 +1,5 @@
 package br.com.cwi.reset.dudacastro;
 
-import br.com.cwi.reset.dudacastro.exceptions.*;
-import br.com.cwi.reset.dudacastro.model.Ator;
-import br.com.cwi.reset.dudacastro.model.StatusCarreira;
 import br.com.cwi.reset.dudacastro.request.AtorRequest;
 import br.com.cwi.reset.dudacastro.service.AtorService;
 
