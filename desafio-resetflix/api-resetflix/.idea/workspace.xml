@@ -5,6 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="081d6fba-df4d-4fec-9868-eb7faa266327" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/controllers/FilmeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/AnoLancamentoNaoInformadoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/CanseiDeCriarExceptionCustomizadaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/CapaFilmeNaoInformadaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/DataCriacaoNaoInformadaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/DescricaoNaoInformadaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/DescricaoPersonagemNaoInformadaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/GeneroNaoInformadoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/IdAtorNaoInformadoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/IdDiretorNaoInformadoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/IdEstudioNaoInformadoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/NomePersonagemNaoInformadoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/request/FilmeRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/request/PersonagemRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/service/FilmeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/service/PersonagemAtorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/FilmeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/FilmeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Ator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Ator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Diretor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Diretor.java" afterDir="false" />
@@ -13,8 +29,15 @@
       <change beforePath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Pessoa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Aula-03/projeto1/src/main/java/br/com/cwi/reset/projeto1/RestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-03/projeto1/src/main/java/br/com/cwi/reset/projeto1/RestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/controllers/AtorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/controllers/AtorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/controllers/DiretorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/controllers/DiretorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/CadastroDuplicadoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/CadastroDuplicadoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/CampoNaoInformadoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/CampoNaoInformadoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/DataNascimentoNaoInformadoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/DataNascimentoNaoInformadoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/FiltroNomeNaoEncontrado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/FiltroNomeNaoEncontrado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/IdNaoInformado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/IdNaoInformado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/ListaVaziaException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/ListaVaziaException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/NascidosNoFuturoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/NascidosNoFuturoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/NomeNaoInformadoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/NomeNaoInformadoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/NomeSobrenomeObrigatorioException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/exception/NomeSobrenomeObrigatorioException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +84,7 @@
       <recent name="D:\ResetLevel2\cwi-reset-03\desafio-resetflix\api-resetflix\src\main\java\br\com\cwi\reset\dudacastro\exceptions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ResetLevel2\cwi-reset-03\desafio-resetflix\api-resetflix\src\main\java\br\com\cwi\reset\dudacastro\exception" />
       <recent name="D:\ResetLevel2\cwi-reset-03\desafio-resetflix\api-resetflix" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
