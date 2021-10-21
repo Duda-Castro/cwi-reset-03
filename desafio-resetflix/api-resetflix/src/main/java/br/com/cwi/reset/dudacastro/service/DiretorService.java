@@ -1,7 +1,7 @@
 package br.com.cwi.reset.dudacastro.service;
 
 import br.com.cwi.reset.dudacastro.FakeDatabase;
-import br.com.cwi.reset.dudacastro.exceptions.*;
+import br.com.cwi.reset.dudacastro.exception.*;
 import br.com.cwi.reset.dudacastro.model.Diretor;
 import br.com.cwi.reset.dudacastro.request.DiretorRequest;
 import br.com.cwi.reset.dudacastro.validator.BasicInfoRequiredValidator;

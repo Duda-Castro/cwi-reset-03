@@ -1,6 +1,6 @@
 package br.com.cwi.reset.dudacastro.validator;
 
-import br.com.cwi.reset.dudacastro.exceptions.*;
+import br.com.cwi.reset.dudacastro.exception.*;
 
 import java.time.LocalDate;
 

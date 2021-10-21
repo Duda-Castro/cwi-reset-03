@@ -1,7 +1,7 @@
 package br.com.cwi.reset.dudacastro.service;
 
 import br.com.cwi.reset.dudacastro.FakeDatabase;
-import br.com.cwi.reset.dudacastro.exceptions.*;
+import br.com.cwi.reset.dudacastro.exception.*;
 import br.com.cwi.reset.dudacastro.model.Ator;
 import br.com.cwi.reset.dudacastro.model.StatusCarreira;
 import br.com.cwi.reset.dudacastro.request.AtorRequest;
