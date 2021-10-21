@@ -27,11 +27,7 @@ public class AtorController {
     @ResponseStatus(HttpStatus.CREATED)
     public void criarAtor(@RequestBody AtorRequest atorRequest) throws Exception {
         this.atorService.criarAtor(atorRequest);
-        String campo;
-        if(atorRequest.getNome().equals(null) || atorRequest.getNome().equals("")){
-            campo = "Nome";
-            throw new CampoNaoInformadoException(campo);
-        }
+
     }
 
     @GetMapping(path = "/em_atividade")

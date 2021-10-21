@@ -12,6 +12,8 @@
       <change beforePath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Genero.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Genero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Pessoa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Aula-03/projeto1/src/main/java/br/com/cwi/reset/projeto1/RestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-03/projeto1/src/main/java/br/com/cwi/reset/projeto1/RestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/controllers/AtorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/controllers/AtorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/controllers/DiretorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/controllers/DiretorController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
