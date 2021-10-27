@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="081d6fba-df4d-4fec-9868-eb7faa266327" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/FilmeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/FilmeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Ator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Ator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Diretor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Diretor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Filme.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Filme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Genero.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Genero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-03/exercicio 3/primeiro-projeto-spring/src/main/java/br/com/cwi/reset/primeiroprojetospring/domain/Pessoa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula-03/projeto1/src/main/java/br/com/cwi/reset/projeto1/RestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula-03/projeto1/src/main/java/br/com/cwi/reset/projeto1/RestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/repository/AtorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/repository/DiretorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/repository/EstudioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/repository/FilmeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/repository/PersonagemAtorRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.properties/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/repository" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -59,13 +51,14 @@
       <recent name="br.com.cwi.reset.dudacastro" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ResetLevel2\cwi-reset-03\desafio-resetflix\api-resetflix\src\main\java\br\com\cwi\reset\dudacastro\repository" />
       <recent name="D:\ResetLevel2\cwi-reset-03\desafio-resetflix\api-resetflix" />
       <recent name="D:\ResetLevel2\cwi-reset-03\desafio-resetflix\api-resetflix\src\main\java\br\com\cwi\reset\dudacastro\service" />
       <recent name="D:\ResetLevel2\cwi-reset-03\desafio-resetflix\api-resetflix\src\main\java\br\com\cwi\reset\dudacastro\request" />
       <recent name="D:\ResetLevel2\cwi-reset-03\desafio-resetflix\api-resetflix\src\main\java\br\com\cwi\reset\dudacastro\model" />
-      <recent name="D:\ResetLevel2\cwi-reset-03\desafio-resetflix\api-resetflix\src\main\java\br\com\cwi\reset\dudacastro\exceptions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ResetLevel2\cwi-reset-03\desafio-resetflix\api-resetflix\src\main\java\br\com\cwi\reset\dudacastro\model" />
       <recent name="D:\ResetLevel2\cwi-reset-03\desafio-resetflix\api-resetflix\src\main\resources" />
       <recent name="D:\ResetLevel2\cwi-reset-03\desafio-resetflix\api-resetflix\src\main\java\br\com\cwi\reset\dudacastro\exception" />
       <recent name="D:\ResetLevel2\cwi-reset-03\desafio-resetflix\api-resetflix" />
