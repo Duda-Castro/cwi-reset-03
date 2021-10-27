@@ -1,4 +1,4 @@
-package br.com.cwi.reset.aula.dois.exercicios;
+package br.com.cwi.reset.primeiroprojetospring.domain;
 
 public enum Genero {
     MASCULINO("Masculino"),
@@ -13,5 +13,9 @@ public enum Genero {
 
     public String getDescricao() {
         return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 }
