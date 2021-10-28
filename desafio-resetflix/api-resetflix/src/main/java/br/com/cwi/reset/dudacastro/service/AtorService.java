@@ -64,6 +64,7 @@ public class AtorService {
             retorno = repository.findAllByStatusCarreira(StatusCarreira.EM_ATIVIDADE);
         }
 
+        assert retorno != null;
         if (retorno.isEmpty()) {
             throw new FiltroNomeNaoEncontrado("Ator", filtroNome);
         }

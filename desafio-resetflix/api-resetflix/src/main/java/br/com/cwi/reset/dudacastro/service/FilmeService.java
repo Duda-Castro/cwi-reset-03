@@ -17,9 +17,9 @@ public class FilmeService {
 
     public FilmeService(FakeDatabase fakeDatabase) {
         this.fakeDatabase = fakeDatabase;
-        this.diretorService = new DiretorService(fakeDatabase);
+        this.diretorService = new DiretorService();
         this.estudioService = new EstudioService(fakeDatabase);
-        this.atorService = new AtorService(fakeDatabase);
+        this.atorService = new AtorService();
         this.personagemAtorService = new PersonagemAtorService(fakeDatabase);
     }
 

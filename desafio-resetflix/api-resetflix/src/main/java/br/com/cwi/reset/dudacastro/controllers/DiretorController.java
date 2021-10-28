@@ -16,13 +16,13 @@ public class DiretorController {
     private DiretorService diretorService;
 
     public DiretorController() {
-        this.diretorService = new DiretorService(FakeDatabase.getInstance());
+        this.diretorService = new DiretorService();
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void cadastrarDiretor(@RequestBody DiretorRequest diretorRequest) throws Exception {
-        this.diretorService.cadastrarDiretor(diretorRequest);
+        this.diretorService.criarDiretor(diretorRequest);
     }
 
     @GetMapping

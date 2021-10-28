@@ -18,7 +18,7 @@ public class AtorController {
     private AtorService atorService;
 
     public AtorController() {
-        this.atorService = new AtorService(FakeDatabase.getInstance());
+        this.atorService = new AtorService();
     }
 
     //demais metodos

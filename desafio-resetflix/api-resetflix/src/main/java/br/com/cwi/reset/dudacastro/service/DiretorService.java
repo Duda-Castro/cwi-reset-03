@@ -2,58 +2,62 @@ package br.com.cwi.reset.dudacastro.service;
 
 import br.com.cwi.reset.dudacastro.FakeDatabase;
 import br.com.cwi.reset.dudacastro.exception.*;
+import br.com.cwi.reset.dudacastro.model.Ator;
 import br.com.cwi.reset.dudacastro.model.Diretor;
+import br.com.cwi.reset.dudacastro.model.StatusCarreira;
+import br.com.cwi.reset.dudacastro.repository.AtorRepository;
+import br.com.cwi.reset.dudacastro.repository.DiretorRepository;
 import br.com.cwi.reset.dudacastro.request.DiretorRequest;
 import br.com.cwi.reset.dudacastro.validator.BasicInfoRequiredValidator;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+@Service
 public class DiretorService {
 
-    private FakeDatabase fakeDatabase;
+    @Autowired
+    private DiretorRepository repository;
 
-    public DiretorService(FakeDatabase fakeDatabase) {
-        this.fakeDatabase = fakeDatabase;
-    }
-
-    public void cadastrarDiretor(final DiretorRequest diretorRequest) throws Exception {
+    public void criarDiretor(final DiretorRequest diretorRequest) throws Exception {
         new BasicInfoRequiredValidator().accept(diretorRequest.getNome(), diretorRequest.getDataNascimento(), diretorRequest.getAnoInicioAtividade(), TipoDominioException.DIRETOR);
 
-        final List<Diretor> diretoresCadastrados = fakeDatabase.recuperaDiretores();
-
-        for (Diretor diretorCadastrado : diretoresCadastrados) {
+        for (Diretor diretorCadastrado : repository.findAll()) {
             if (diretorCadastrado.getNome().equalsIgnoreCase(diretorRequest.getNome())) {
                 throw new CadastroDuplicadoException(TipoDominioException.DIRETOR.getSingular(), diretorRequest.getNome());
             }
         }
 
-        final Integer idGerado = diretoresCadastrados.size() + 1;
+        List<Diretor> listaTodos = (List<Diretor>)repository.findAll();
 
-        final Diretor diretor = new Diretor(idGerado, diretorRequest.getNome(), diretorRequest.getDataNascimento(), diretorRequest.getAnoInicioAtividade());
+        final Integer idGerado = listaTodos.size() + 1;
 
-        fakeDatabase.persisteDiretor(diretor);
+        final Diretor diretorCriado = new Diretor(idGerado, diretorRequest.getNome(), diretorRequest.getDataNascimento(), diretorRequest.getAnoInicioAtividade());
+
+        repository.save(diretorCriado);
     }
 
-    public List<Diretor> listarDiretores(final String filtroNome) throws Exception {
-        final List<Diretor> diretoresCadastrados = fakeDatabase.recuperaDiretores();
+    public List<Diretor> listarDiretores(String filtroNome) throws Exception {
 
-        if (diretoresCadastrados.isEmpty()) {
+        if (repository.findAll().isEmpty()) {
             throw new ListaVaziaException(TipoDominioException.DIRETOR.getSingular(), TipoDominioException.DIRETOR.getPlural());
         }
 
-        final List<Diretor> retorno = new ArrayList<>();
+        List<Diretor> retorno = null;
 
         if (filtroNome != null) {
-            for (Diretor diretor : diretoresCadastrados) {
+            for (Diretor diretor : repository.findAll()) {
                 final boolean containsFilter = diretor.getNome().toLowerCase(Locale.ROOT).contains(filtroNome.toLowerCase(Locale.ROOT));
+
                 if (containsFilter) {
-                    retorno.add(diretor);
+                    retorno.add(new Diretor(diretor.getId(), diretor.getNome(), diretor.getDataNascimento(),diretor.getAnoInicioAtividade()));
                 }
             }
         } else {
-            retorno.addAll(diretoresCadastrados);
+            retorno = repository.findAll();
         }
 
         if (retorno.isEmpty()) {
@@ -68,9 +72,8 @@ public class DiretorService {
             throw new IdNaoInformado();
         }
 
-        final List<Diretor> diretores = fakeDatabase.recuperaDiretores();
 
-        for (Diretor diretor : diretores) {
+        for (Diretor diretor : repository.findAll()) {
             if (diretor.getId().equals(id)) {
                 return diretor;
             }
