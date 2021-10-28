@@ -31,7 +31,7 @@ public class AtorController {
     }
 
     @GetMapping(path = "/em_atividade")
-    public List<AtorEmAtividade> listarAtoresEmAtividade(@RequestParam String filtroNome) throws Exception {
+    public List<Ator> listarAtoresEmAtividade(@RequestParam String filtroNome) throws Exception {
         return this.atorService.listarAtoresEmAtividade(filtroNome);
     }
 

@@ -4,21 +4,24 @@ import br.com.cwi.reset.dudacastro.FakeDatabase;
 import br.com.cwi.reset.dudacastro.exception.*;
 import br.com.cwi.reset.dudacastro.model.Ator;
 import br.com.cwi.reset.dudacastro.model.StatusCarreira;
+import br.com.cwi.reset.dudacastro.repository.AtorRepository;
 import br.com.cwi.reset.dudacastro.request.AtorRequest;
 import br.com.cwi.reset.dudacastro.response.AtorEmAtividade;
 import br.com.cwi.reset.dudacastro.validator.BasicInfoRequiredValidator;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+@Service
 public class AtorService {
 
-    private FakeDatabase fakeDatabase;
+    @Autowired
+    private AtorRepository repository;
 
-    public AtorService(FakeDatabase fakeDatabase) {
-        this.fakeDatabase = fakeDatabase;
-    }
+
 
     public void criarAtor(AtorRequest atorRequest) throws Exception {
         new BasicInfoRequiredValidator().accept(atorRequest.getNome(), atorRequest.getDataNascimento(), atorRequest.getAnoInicioAtividade(), TipoDominioException.ATOR);
@@ -27,45 +30,38 @@ public class AtorService {
             throw new StatusCarreiraNaoInformadoException();
         }
 
-        final List<Ator> atoresCadastrados = fakeDatabase.recuperaAtores();
-
-        for (Ator atorCadastrado : atoresCadastrados) {
-            if (atorCadastrado.getNome().equalsIgnoreCase(atorRequest.getNome())) {
-                throw new CadastroDuplicadoException(TipoDominioException.ATOR.getSingular(), atorRequest.getNome());
-            }
+        Ator ator = repository.findByNome(atorRequest.getNome());
+        if (ator != null) {
+            throw new CadastroDuplicadoException(TipoDominioException.ATOR.getSingular(), atorRequest.getNome());
         }
 
-        final Integer idGerado = atoresCadastrados.size() + 1;
+        List<Ator> listaTodos = (List<Ator>)repository.findAll();
 
-        final Ator ator = new Ator(idGerado, atorRequest.getNome(), atorRequest.getDataNascimento(), atorRequest.getStatusCarreira(), atorRequest.getAnoInicioAtividade());
+        final Integer idGerado = listaTodos.size() + 1;
 
-        fakeDatabase.persisteAtor(ator);
+        final Ator atorCriado = new Ator(idGerado, atorRequest.getNome(), atorRequest.getDataNascimento(), atorRequest.getStatusCarreira(), atorRequest.getAnoInicioAtividade());
+
+        repository.save(atorCriado);
     }
 
-    public List<AtorEmAtividade> listarAtoresEmAtividade(String filtroNome) throws Exception {
-        final List<Ator> atoresCadastrados = fakeDatabase.recuperaAtores();
+    public List<Ator> listarAtoresEmAtividade(String filtroNome) throws Exception {
 
-        if (atoresCadastrados.isEmpty()) {
+        if (repository.findByStatusCarreira(StatusCarreira.EM_ATIVIDADE) == null) {
             throw new ListaVaziaException(TipoDominioException.ATOR.getSingular(), TipoDominioException.ATOR.getPlural());
         }
 
-        final List<AtorEmAtividade> retorno = new ArrayList<>();
+        List<Ator> retorno = null;
 
         if (filtroNome != null) {
-            for (Ator ator : atoresCadastrados) {
+            for (Ator ator : repository.findAllByStatusCarreira(StatusCarreira.EM_ATIVIDADE)) {
                 final boolean containsFilter = ator.getNome().toLowerCase(Locale.ROOT).contains(filtroNome.toLowerCase(Locale.ROOT));
                 final boolean emAtividade = StatusCarreira.EM_ATIVIDADE.equals(ator.getStatusCarreira());
                 if (containsFilter && emAtividade) {
-                    retorno.add(new AtorEmAtividade(ator.getId(), ator.getNome(), ator.getDataNascimento()));
+                    retorno.add(new Ator(ator.getId(), ator.getNome(), ator.getDataNascimento()));
                 }
             }
         } else {
-            for (Ator ator : atoresCadastrados) {
-                final boolean emAtividade = StatusCarreira.EM_ATIVIDADE.equals(ator.getStatusCarreira());
-                if (emAtividade) {
-                    retorno.add(new AtorEmAtividade(ator.getId(), ator.getNome(), ator.getDataNascimento()));
-                }
-            }
+            retorno = repository.findAllByStatusCarreira(StatusCarreira.EM_ATIVIDADE);
         }
 
         if (retorno.isEmpty()) {
@@ -80,9 +76,8 @@ public class AtorService {
             throw new IdNaoInformado();
         }
 
-        final List<Ator> atores = fakeDatabase.recuperaAtores();
 
-        for (Ator ator : atores) {
+        for (Ator ator : repository.findAll()) {
             if (ator.getId().equals(id)) {
                 return ator;
             }
@@ -92,12 +87,11 @@ public class AtorService {
     }
 
     public List<Ator> consultarAtores() throws Exception {
-        final List<Ator> atores = fakeDatabase.recuperaAtores();
 
-        if (atores.isEmpty()) {
+        if (repository.findAll().isEmpty()) {
             throw new ListaVaziaException(TipoDominioException.ATOR.getSingular(), TipoDominioException.ATOR.getPlural());
         }
 
-        return atores;
+        return repository.findAll();
     }
 }

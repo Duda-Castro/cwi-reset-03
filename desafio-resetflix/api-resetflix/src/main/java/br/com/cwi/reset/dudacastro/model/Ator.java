@@ -26,6 +26,12 @@ public class Ator {
         this.anoInicioAtividade = anoInicioAtividade;
     }
 
+    public Ator(Integer idGerado, String nome, LocalDate dataNascimento, StatusCarreira statusCarreira, Integer anoInicioAtividade) {
+    }
+
+    public Ator(Integer id, String nome, LocalDate dataNascimento) {
+    }
+
     public Integer getId() {
         return id;
     }

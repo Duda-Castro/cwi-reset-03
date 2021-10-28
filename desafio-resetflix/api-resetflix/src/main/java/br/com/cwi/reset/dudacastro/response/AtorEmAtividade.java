@@ -25,4 +25,7 @@ public class AtorEmAtividade {
     public LocalDate getDataNascimento() {
         return dataNascimento;
     }
+
+
+
 }
