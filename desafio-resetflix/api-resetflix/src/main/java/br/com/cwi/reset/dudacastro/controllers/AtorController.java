@@ -6,6 +6,7 @@ import br.com.cwi.reset.dudacastro.model.Ator;
 import br.com.cwi.reset.dudacastro.request.AtorRequest;
 import br.com.cwi.reset.dudacastro.response.AtorEmAtividade;
 import br.com.cwi.reset.dudacastro.service.AtorService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/atores")
 public class AtorController {
-
+    @Autowired
     private AtorService atorService;
 
     public AtorController() {

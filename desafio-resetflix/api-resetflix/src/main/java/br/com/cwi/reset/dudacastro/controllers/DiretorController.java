@@ -4,6 +4,7 @@ import br.com.cwi.reset.dudacastro.FakeDatabase;
 import br.com.cwi.reset.dudacastro.model.Diretor;
 import br.com.cwi.reset.dudacastro.request.DiretorRequest;
 import br.com.cwi.reset.dudacastro.service.DiretorService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/diretores")
 public class DiretorController {
-
+    @Autowired
     private DiretorService diretorService;
 
     public DiretorController() {

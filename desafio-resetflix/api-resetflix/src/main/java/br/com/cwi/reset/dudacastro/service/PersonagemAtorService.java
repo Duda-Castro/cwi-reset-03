@@ -25,7 +25,7 @@ public class PersonagemAtorService {
         repository.save(personagemAtor);
     }
 
-    public List<PersonagemAtor> consultarPersonagemAtor(String nome) throws Exception {
+    public List<PersonagemAtor> consultarPersonagemAtor(List<PersonagemRequest> nome) throws Exception {
 
         return repository.findByNome(nome);
 
