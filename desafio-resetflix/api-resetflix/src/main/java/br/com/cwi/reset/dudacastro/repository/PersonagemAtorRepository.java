@@ -11,4 +11,5 @@ import java.util.List;
 public interface PersonagemAtorRepository extends CrudRepository<PersonagemAtor, Integer> {
 
 
+    List<PersonagemAtor> findByNome(String nome);
 }
