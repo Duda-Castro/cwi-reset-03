@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="081d6fba-df4d-4fec-9868-eb7faa266327" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/controllers/AtorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/controllers/AtorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/controllers/DiretorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/controllers/DiretorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/model/Diretor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/model/Diretor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/repository/DiretorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/repository/DiretorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/service/AtorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/service/AtorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/service/DiretorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/service/DiretorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/repository/EstudioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/repository/EstudioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/service/EstudioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/service/EstudioService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/service/FilmeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cwi/reset/dudacastro/service/FilmeService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
