@@ -12,7 +12,7 @@ import java.util.List;
 public interface FilmeRepository extends CrudRepository<Filme, Integer> {
 
 
-    List<Filme> findByNomeFilmeAndNomeDiretorAndNomePersonagemAndNomeAtor(String nomeFilme,
+    List<Filme> findByNomeOrFindByDiretorOrFindByPersonagensOrFindByAtor(String nomeFilme,
                                                                           String nomeDiretor,
                                                                           String nomePersonagem,
                                                                           String nomeAtor);

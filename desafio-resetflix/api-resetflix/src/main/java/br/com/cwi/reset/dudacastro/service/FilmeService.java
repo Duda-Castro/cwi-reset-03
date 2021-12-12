@@ -1,6 +1,5 @@
 package br.com.cwi.reset.dudacastro.service;
 
-import br.com.cwi.reset.dudacastro.FakeDatabase;
 import br.com.cwi.reset.dudacastro.model.*;
 import br.com.cwi.reset.dudacastro.repository.FilmeRepository;
 import br.com.cwi.reset.dudacastro.request.FilmeRequest;
@@ -38,6 +37,6 @@ public class FilmeService {
             String nomeAtor) throws Exception {
 
 
-        return repository.findByNomeFilmeAndNomeDiretorAndNomePersonagemAndNomeAtor(nomeFilme,nomeDiretor,nomePersonagem,nomeAtor);
+        return repository.findByNomeOrFindByDiretorOrFindByPersonagensOrFindByAtor(nomeFilme,nomeDiretor,nomePersonagem,nomeAtor);
     }
 }

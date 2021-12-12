@@ -13,4 +13,5 @@ public interface PersonagemAtorRepository extends CrudRepository<PersonagemAtor,
 
 
     List<PersonagemAtor> findByNome(List<PersonagemRequest> nome);
+
 }

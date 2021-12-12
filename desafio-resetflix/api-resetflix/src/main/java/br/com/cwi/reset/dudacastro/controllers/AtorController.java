@@ -1,6 +1,5 @@
 package br.com.cwi.reset.dudacastro.controllers;
 
-import br.com.cwi.reset.dudacastro.FakeDatabase;
 import br.com.cwi.reset.dudacastro.exception.CampoNaoInformadoException;
 import br.com.cwi.reset.dudacastro.model.Ator;
 import br.com.cwi.reset.dudacastro.request.AtorRequest;

@@ -1,6 +1,5 @@
 package br.com.cwi.reset.dudacastro.service;
 
-import br.com.cwi.reset.dudacastro.FakeDatabase;
 import br.com.cwi.reset.dudacastro.exception.*;
 import br.com.cwi.reset.dudacastro.model.Ator;
 import br.com.cwi.reset.dudacastro.model.StatusCarreira;
@@ -36,7 +35,7 @@ public class AtorService {
         }
 
         List<Ator> listaTodos = (List<Ator>)repository.findAll();
-
+//teste
         final Integer idGerado = listaTodos.size() + 1;
 
         final Ator atorCriado = new Ator(idGerado, atorRequest.getNome(), atorRequest.getDataNascimento(), atorRequest.getStatusCarreira(), atorRequest.getAnoInicioAtividade());

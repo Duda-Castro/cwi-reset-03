@@ -12,7 +12,7 @@ import java.util.List;
 public interface EstudioRepository extends CrudRepository<Estudio, Integer> {
 
 
-    List<Estudio> getByFiltroNome(String filtroNome);
+    List<Estudio> getByNome(String filtroNome);
 
     Estudio getById(Integer id);
 }
